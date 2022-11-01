@@ -23,7 +23,7 @@ image = cv2.imread("images_7/filter_avg.jpg", cv2.IMREAD_GRAYSCALE)
 if image is None: raise Exception("영상파일 읽기 오류")
 
 avg_img = average_filter(image, 5)
-blur_img = cv2.blur(image, (5, 5), (-1, -1), cv2.BORDER_REFLECT)
+blur_img = cv2.blur(image, (5, 5), cv2.BORDER_REFLECT)
 box_img = cv2.boxFilter(image, ddepth=-1, ksize=(5, 5))
 
 cv2.imshow("image", image)
