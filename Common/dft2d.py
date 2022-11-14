@@ -1,7 +1,5 @@
 import math
-
-import cv2
-import numpy as np
+import numpy as np, cv2
 
 
 def calc_spectrum(complex):
@@ -16,7 +14,7 @@ def calc_spectrum(complex):
 
 def fftshift(img):
     dst = np.zeros(img.shape, img.dtype)
-    h, w = img.shape[:2]
+    h, w = dst.shape[:2]
     cy, cx = h // 2, w // 2
     dst[h - cy:, w - cx:] = np.copy(img[0:cy, 0:cx])
     dst[0:cy, 0:cx] = np.copy(img[h - cy:, w - cx:])
