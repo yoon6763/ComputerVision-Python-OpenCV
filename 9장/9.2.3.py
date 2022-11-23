@@ -25,7 +25,7 @@ def ck_time(mode=0):
         print("수행시간 = %.5f sec" % (etime - stime))
 
 
-image = cv2.imread("images/rotate_test.jpg", cv2.IMREAD_GRAYSCALE)
+image = cv2.imread("images-5/mo.jpg", cv2.IMREAD_GRAYSCALE)
 if image is None: raise Exception("영상파일 읽기 오류")
 
 ck_time(0)
